@@ -68,6 +68,8 @@ Profession: ${userProfession}`);
 let numA = prompt (`Choose a number!`);
 let numB = prompt (`Choose a different number!`);
 
+// Watched video and saw it should be let numA = Number(prompt(`Choose a Number`));
+
 alert(Number(numA) + Number(numB));
 alert(Number(numA) - Number(numB));
 alert(Number(numA) * Number(numB));
