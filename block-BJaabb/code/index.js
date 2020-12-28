@@ -9,21 +9,19 @@
 let user = prompt("What is your name?");
 alert(user);
 let userName = user;
-console.log(user);
-console.log(userName);
+console.log(user, "user", userName, "userName");
 
-let age = 22; isLearning = true;
+let age = 22, isLearning = true;
 user = "John";
-console.log (user);
-console.log (userName);
+console.log (user, "user", userName, "userName");
 
 /* 2.
 Use `prompt` to take two numbers from user and store it in variable `numA` and `numB`. Create a third variable called `sum`, using `+` operator add numA and numB , store it in varible `sum` and using alert display `sum` in browser.
 */
 
-let numA = Number(prompt("Enter a number"));
+let numA = +prompt("Enter a number");
 
-let numB = Number(prompt("Enter another number"));
+let numB = +prompt("Enter another number");
 
 let sum = numA + numB;
 
@@ -49,18 +47,31 @@ for (let i = 9; i >= 1; i--) {
 
 // 5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
 
-let i = 5;
-while (i >= 0) {
-    let sum = 5;
-    sum =- 1;
-    console.log(sum);
-    i--;
+let finalString = "";
+let initialValue = 5;
+
+while(initialValue >=0) {
+    finalString += initialValue;
+    initialValue--;
 }
+
+console.log(finalString);
 
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
 
+let finalString = "";
+let initialValue = 10;
 
-r
+while(initialValue >= 0) {
+    if (initialValue % 2 === 0) {
+    finalString += initialValue;
+    }
+    initialValue--;
+}
+
+console.log(finalString);
+
+
 // Comparisoin
 
 /* 7. Take two value using prompt and store them in variables `num1` and `num2`. Check whether they are equal or not.
@@ -76,13 +87,23 @@ Example:
 
 */
 
-let num1 = Number(prompt("Enter a number"));
-let num2 = Number(prompt("Enter another number"));
+let num1 = +prompt("Enter a number");
+let num2 = +prompt("Enter another number");
 
-if (num1 === num2) {
-    alert("true");
-} else if (num1 !== num2) {
-    alert("false");
-} else if (num1 === 'true' || num1 === 'null' || num1 === "undefined" || num2 === 'true' || num2 === 'null' || num2 === "undefined") {
-    alert("Enter a valid value");
+
+if (isNaN(num1) || isNaN(num2)) {
+    alert("Enter a valid number");
+} else {
+    alert(num1 === num2);
 }
+
+// +"true" // NaN
+// +"null" // Na
+// +'undefined' // NaN
+
+// But cannot compare Nan to eachother, so have to use a function called 'isNan()'
+
+// isNaN("hello"); // true
+// isNaN("true"); // true
+// isNaN("null"); // true
+// isNaN("undefined"); // true
