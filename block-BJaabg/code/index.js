@@ -13,6 +13,15 @@ const ACCESSORY_PRICE = 9.99;
 
 var bank_balance = 303.91;
 var amount = 0;
-// your code goes here
+// 
+
+let finalPhonePrice = `$`;
+
+while(bank_balance >= 303.91 && bank_balance >= 0) {
+    
+}
+
 
 // ⛑ Answer of the above will `$334.76`.
+
+
